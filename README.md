@@ -26,6 +26,7 @@ params:
 5. author [return books where author is contain]
 6. name, author [return books where name and author is contain]
 7. isbn=value
+
 example: http://localhost:8080/api/v1/books/?name=it&author=king&sort=id,asc
 return the all books with your params.
 
