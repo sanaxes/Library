@@ -34,9 +34,13 @@ GET /api/v1/books/{id}
 return a single book.
 
 POST /api/v1/books
+
 headers: Content-Type :application/json
+
 body: JSON
+
 params: name(String), author(String), isbn(int), yearOfEstablishment(int).
+
 example:
 {
 	"name" : "it",
