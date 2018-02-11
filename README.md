@@ -4,11 +4,11 @@ CRUD Rest-API Application
 This is simple spring-boot application with CRUD system (Hibernate, MySQL).
 
 1. Preparing to run application.
-1.1. login to mysql with root grants
-1.2. use command: "CREATE DATABASE LIBRARY;" for create database.
-1.3. use command: "CREATE USER 'librarian'@'localhost' IDENTIFIED BY '123456';" for create new user.
-1.4. use command: "GRANT ALL PRIVILEGES ON library . * TO 'librarian'@'localhost';" for give privileges to created user.
-1.5. you actually may change the name, password, port and database name into src/main/resources/application.properties
+1.1) login to mysql with root grants
+1.2) use command: "CREATE DATABASE LIBRARY;" for create database.
+1.3) use command: "CREATE USER 'librarian'@'localhost' IDENTIFIED BY '123456';" for create new user.
+1.4) use command: "GRANT ALL PRIVILEGES ON library . * TO 'librarian'@'localhost';" for give privileges to created user.
+1.5) you actually may change the name, password, port and database name into src/main/resources/application.properties
 2. Run the application.
 2.1. unzip archive into some folder.
 2.2. open cmd and change directory to this folder.
