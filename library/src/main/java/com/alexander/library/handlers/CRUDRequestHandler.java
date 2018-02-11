@@ -121,6 +121,11 @@ public class CRUDRequestHandler {
       return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
     }
     book.setId(id);
+    Book bookForCheckIsbn = bookRepository.findByIsbn(book.getIsbn()).get(0);
+    if (bookForCheckIsbn.getId() != book.getId()) {
+      logger.info("THIS ISBN: [" + book.getIsbn() + "] ALREADY EXISTS INTO LIBRARY");
+      return new ResponseEntity<Void>(HttpStatus.CONFLICT);
+    }
     bookRepository.save(book);
     logger.info("BOOK " + book.toString() + " UPDATED");
     HttpHeaders headers = new HttpHeaders();
