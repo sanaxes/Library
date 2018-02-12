@@ -82,8 +82,7 @@ public class CRUDRequestHandler {
   }
 
   // GET SINGLE BOOK BY ISBN
-  public ResponseEntity<List<Book>> getSingleBookByIsbn(String isbn,
-      UriComponentsBuilder ucBuilder) {
+  public ResponseEntity<List<Book>> getSingleBookByIsbn(String isbn) {
     logger.info("GET REQUEST." + " PARAMS: [isbn: " + isbn
         + "]. GET SINGLE BOOK BY ISBN. PATH: /api/v1/books/");
     List<Book> book = bookRepository.findByIsbn(isbn);
