@@ -47,8 +47,7 @@ public class CRUDController {
 
   // 'localhost:8080/api/v1/books' GET REQUEST [GET SINGLE BOOK BY ISBN]
   @GetMapping(value = "/books", params = {"isbn"})
-  public ResponseEntity<List<Book>> findByIsbn(@RequestParam("isbn") String isbn,
-      UriComponentsBuilder ucBuilder) {
+  public ResponseEntity<List<Book>> findByIsbn(@RequestParam("isbn") String isbn) {
     return crudRequestHandler.getSingleBookByIsbn(isbn, ucBuilder);
   }
 
